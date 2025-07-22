@@ -22,36 +22,11 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -65,4 +40,96 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+Header{
+  height: 50px;
+  background-color: #8a8e75;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  align-items: center;   /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+}
+
+header img {
+  height: 40px;     /* Set the height */
+  width: auto;      /* Keep aspect ratio */
+  object-fit: contain;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+html, body {
+  margin: 0;
+  height: 100%;                /* Full viewport height */
+}
+
+body {
+  display: flex;
+  align-items: center;         /* Vertical centering */
+  justify-content: center;     /* Horizontal centering */
+  flex-direction: column;      /* Stack elements vertically */
+  background-color: #f1ead8;   /* Page background */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Main content container */
+.main {
+  display: flex;
+  align-items: center;         /* Vertical center inside main */
+  justify-content: center;     /* Horizontal center inside main */
+  flex-direction: column;
+  width: 100%;
+  height: 100%;                /* Fill the whole viewport */
+}
+
+/* Video container styling */
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+video {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #9dd9ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
