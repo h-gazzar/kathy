@@ -105,26 +105,21 @@ body {
   height: 100%;
 }
 
-/* Inner box - auto-expands with content */
 .inner-constructor {
   width: 30vw;
   background-color: #d5c7ad;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   min-width: 280px;
-
-  /* Remove fixed heights so it grows naturally */
   height: auto;
   max-height: none;
+  padding: 30px;
 
-  /* Add padding so content doesn’t stick to edges */
-  padding-bottom: 30px;
+  /* Centering with flex parent */
+  margin: auto;
 }
+
 
 
 /* Top header background */
