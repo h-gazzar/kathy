@@ -488,7 +488,7 @@ body {
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
-  color: #333; /* <--- Make entered text grey */
+  color: #68604d; /* <--- Make entered text grey */
 }
 
 /* Style the placeholder text */
