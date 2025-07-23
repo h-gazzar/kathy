@@ -477,6 +477,7 @@ body {
   align-items: center;
 }
 
+/* Ensure text inside inputs is visible */
 .subscribe-form input[type="email"],
 .subscribe-form input[type="tel"] {
   width: 100%;
@@ -487,6 +488,13 @@ body {
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
+  color: #333; /* <--- Make entered text grey */
+}
+
+/* Style the placeholder text */
+.subscribe-form input::placeholder {
+  color: #777;  /* Light grey for placeholders */
+  opacity: 1;   /* Ensure it’s fully visible */
 }
 
 /* Highlight on focus */
