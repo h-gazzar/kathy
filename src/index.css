@@ -129,7 +129,7 @@ body {
 
 /* Top header background */
 .top-bg {
-  background-color: #bec5a4;
+  background-color: #8a8e75;
   height: 120px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -437,18 +437,31 @@ body {
 }
 
 
-/* Subscribe section styling */
 .subscribe-section {
   background-color: #f1ead8;
-  border-radius: 12px;             /* Rounded corners like .reviews */
-  padding: 20px 2vw;               /* Same left/right padding */
+  border-radius: 12px;
+  padding: 20px 2vw;
   margin: 20px auto;
   max-width: 90%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Matches reviews shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+
+  /* Animation for entry */
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.8s ease forwards;
 }
+
+/* Keyframes for fade/slide animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Heading + description */
 .subscribe-heading {
@@ -472,17 +485,25 @@ body {
   align-items: center;
 }
 
-/* Input fields */
 .subscribe-form input[type="email"],
 .subscribe-form input[type="tel"] {
   width: 100%;
   max-width: 400px;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px 15px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
 }
+
+/* Highlight on focus */
+.subscribe-form input:focus {
+  outline: none;
+  border-color: #8a8e75;
+  box-shadow: 0 0 6px rgba(138, 142, 117, 0.4);
+}
+
 
 /* Submit button */
 .subscribe-button {
@@ -493,8 +514,15 @@ body {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
+
+.subscribe-button:hover {
+  background-color: #6d715f;
+  transform: translateY(-2px);
+}
+
 
 .subscribe-button:hover {
   background-color: #6d715f;
@@ -505,4 +533,24 @@ body {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #4a4a4a;
+}
+
+
+/* Universal float-up animation */
+.float-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: floatUp 0.8s ease forwards;
+}
+
+/* Slight delay per element if you want a staggered effect */
+.float-up.delay-1 { animation-delay: 0.1s; }
+.float-up.delay-2 { animation-delay: 0.2s; }
+.float-up.delay-3 { animation-delay: 0.3s; }
+
+@keyframes floatUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
