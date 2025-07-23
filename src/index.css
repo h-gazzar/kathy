@@ -64,11 +64,14 @@ header img {
   align-items: center;
 }
 
+/* Remove extra margin and max-width here */
 video {
-  max-width: 80%;
+  display: block;
+  width: 100%; /* The wrapper will handle scaling */
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin: 0;   /* Removes bottom spacing */
 }
+
 
 .controls {
   display: flex;
@@ -102,10 +105,9 @@ body {
   height: 100%;
 }
 
-/* Inner box */
+/* Inner box - auto-expands with content */
 .inner-constructor {
   width: 30vw;
-  height: 90vh;
   background-color: #d5c7ad;
   position: absolute;
   top: 40px;
@@ -115,8 +117,15 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   min-width: 280px;
-  max-height: 95vh;
+
+  /* Remove fixed heights so it grows naturally */
+  height: auto;
+  max-height: none;
+
+  /* Add padding so content doesn’t stick to edges */
+  padding-bottom: 30px;
 }
+
 
 /* Top header background */
 .top-bg {
@@ -153,7 +162,6 @@ body {
   text-align: center;
 }
 
-/* Socials */
 .social-links {
   display: flex;
   justify-content: center;
@@ -271,4 +279,230 @@ body {
   h1 {
     font-size: 1.5em;
   }
+}
+
+/* Video wrapper stays the same */
+.videoWrapper {
+  position: relative;
+  margin-top:50px;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  box-sizing: border-box; /* Ensures padding doesn’t expand the container */
+
+}
+
+/* Ensure video fills wrapper */
+.videoWrapper video {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0;
+  
+}
+
+/* Progress bar at the bottom of the video (slightly smaller) */
+.progressBar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(95% - 4vw); /* Make bar 5% narrower than full width */
+  height: 4px;            /* Slightly thinner */
+  appearance: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+
+
+.progressBar::-webkit-slider-thumb {
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #ffffff;  
+  border-radius: 50%;
+  cursor: pointer;
+  
+}
+
+/* Buttons (bottom left) */
+.videoButtons {
+  position: absolute;
+  bottom: 40px;      
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 6;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  box-sizing: border-box; /* Ensures padding doesn’t expand the container */
+}
+
+/* Button styles with fixed size */
+.iconButton {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;            /* Fixed button size */
+  height: 44px;           /* Same width & height */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.iconButton:hover {
+  background: #f0f0f0;
+}
+
+/* Force icons to be identical sizes and centered */
+.iconButton img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;  /* Ensures no distortion */
+  display: block;
+  pointer-events: none;
+}
+
+.seperator {
+  width: 90%;
+  height: 1px;
+  margin: 2vw auto;          /* Centers it horizontally with spacing */
+  background-color: #aaa;     /* Softer grey color */
+  border: none;               /* Removes any default border */
+  display: block;
+}
+
+
+/* Reviews container with rounded edges */
+.reviews {
+  background-color: #f1ead8;
+  border-radius: 12px;              /* Rounded corners */
+  padding: 20px 2vw;                /* Added 2vw left/right padding */
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  box-sizing: border-box;           /* Ensure padding doesn’t overflow */
+}
+
+/* Accordion wrapper */
+.review-item {
+  border-bottom: 1px solid #d0d0d0;
+  padding: 10px 0;
+}
+
+/* Accordion header (clickable) */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.review-header:hover {
+  background-color: #e6deca; /* Subtle hover */
+}
+
+/* Accordion content (hidden by default) */
+.review-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 10px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+  line-height: 1.4;
+}
+
+/* Expanded state */
+.review-item.active .review-content {
+  max-height: 1000px; /* Large enough to fit long reviews */
+  opacity: 1;
+  padding-top: 10px;
+}
+
+
+/* Subscribe section styling */
+.subscribe-section {
+  background-color: #f1ead8;
+  border-radius: 12px;             /* Rounded corners like .reviews */
+  padding: 20px 2vw;               /* Same left/right padding */
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Matches reviews shadow */
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading + description */
+.subscribe-heading {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-text {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Form layout */
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Input fields */
+.subscribe-form input[type="email"],
+.subscribe-form input[type="tel"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Submit button */
+.subscribe-button {
+  background-color: #8a8e75;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #6d715f;
+}
+
+/* Success/Error message (if using state) */
+.subscribe-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #4a4a4a;
 }

@@ -1,13 +1,19 @@
 import { useRef, useState, useEffect } from 'react';
 import videoFile from '/0715.mp4';
 
+// Icons (ensure they are in your public folder with correct names)
+import playIcon from '/play-svgrepo-com.svg';
+import pauseIcon from '/pause-svgrepo-com.svg';
+import muteIcon from '/sound-off-filled-svgrepo-com.svg';
+import unmuteIcon from '/sound-loud-svgrepo-com (1).svg';
+
 function VideoPlayer() {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // Update progress bar as video plays
+  // Update progress bar dynamically
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -18,9 +24,7 @@ function VideoPlayer() {
     };
 
     video.addEventListener('timeupdate', updateProgress);
-    return () => {
-      video.removeEventListener('timeupdate', updateProgress);
-    };
+    return () => video.removeEventListener('timeupdate', updateProgress);
   }, []);
 
   const togglePlay = () => {
@@ -56,20 +60,26 @@ function VideoPlayer() {
         muted={isMuted}
         playsInline
       />
-      <div className="videoControls">
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value={progress}
-          onChange={handleSeek}
-        />
-        <div className="buttons">
-          <button onClick={togglePlay}>{isPlaying ? 'Pause' : 'Play'}</button>
-          <button onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
-        </div>
+      {/* Progress bar at top */}
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value={progress}
+        onChange={handleSeek}
+        className="progressBar"
+      />
+      {/* Overlayed buttons */}
+      <div className="videoButtons">
+        <button onClick={togglePlay} className="iconButton">
+          <img src={isPlaying ? pauseIcon : playIcon} alt="Play/Pause" />
+        </button>
+        <button onClick={toggleMute} className="iconButton">
+          <img src={isMuted ? unmuteIcon : muteIcon} alt="Mute/Unmute" />
+        </button>
       </div>
     </div>
   );
 }
+
 export default VideoPlayer;
