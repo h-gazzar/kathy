@@ -1,35 +1,49 @@
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
+import { useState } from 'react';
 
-  try {
-    // Parse request body safely (Vercel doesn't auto-parse for us)
-    const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-    const { email, phone } = body || {};
+function SubscribeSection() {
+  const [message, setMessage] = useState('');
 
-    if (!email && !phone) {
-      return res.status(400).json({ error: 'Email or phone is required' });
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
 
-    // Forward to Google Apps Script Web App
-    const googleRes = await fetch(
-      'https://script.google.com/macros/s/AKfycbxnQ5YXLN4274HJyMHMVvDtMuJazExsNkhI-qrgys9d1BFyc4fw108jTzdEaZYYSWJ2sA/exec',
-      {
+    try {
+      const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, phone }),
+      });
+      
+      
+      
+
+      if (response.ok) {
+        setMessage("Thank you for subscribing!");
+        e.target.reset(); // clear form
+      } else {
+        setMessage("Oops! Something went wrong. Please try again.");
       }
-    );
+    } catch (error) {
+      console.error(error);
+      setMessage("Could not connect. Try again later.");
+    }
+  };
 
-    const text = await googleRes.text();
-
-    return res.status(200).json({ result: 'success', googleResponse: text });
-  } catch (error) {
-    console.error('Subscribe API Error:', error);
-    return res.status(500).json({
-      error: 'Failed to save subscription',
-      details: error.message,
-    });
-  }
+  return (
+    <div className="subscribe-section">
+      <h2 className="subscribe-heading">Stay Connected</h2>
+      <p className="subscribe-text">
+        Sign up to get tips on hormones, gut health, and wellness straight to your inbox.
+      </p>
+      <form className="subscribe-form" onSubmit={handleSubmit}>
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <input type="tel" name="phone" placeholder="Enter your phone (optional)" />
+        <button type="submit" className="subscribe-button">Subscribe</button>
+      </form>
+      {message && <p className="subscribe-message">{message}</p>}
+    </div>
+  );
 }
+
+export default SubscribeSection;
