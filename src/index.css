@@ -77,34 +77,34 @@ video {
   display: flex;
   gap: 10px;
 }
-
 html, body {
   margin: 0;
-  height: 100%;
+  padding: 0;
+  height: auto;          /* Let page grow naturally */
+  min-height: 100vh;     /* Still fills the screen initially */
 }
 
 body {
-  margin: 0;
-  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;    /* Horizontal center */
+  justify-content: flex-start; /* Don't force vertical centering */
   background-color: #f1ead8;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
-/* Main container */
+/* Make .main stack naturally with scroll */
 .main {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
+/* Keep card centered horizontally but free vertically */
 .inner-constructor {
   width: 30vw;
   background-color: #d5c7ad;
@@ -112,14 +112,11 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   min-width: 280px;
-  height: auto;
-  max-height: none;
-  padding: 30px;
+  padding-bottom: 30px;
 
-  /* Centering with flex parent */
-  margin: auto;
+  position: relative;   /* For logo */
+  margin: 40px auto;    /* Horizontal center with margin at top */
 }
-
 
 
 /* Top header background */
