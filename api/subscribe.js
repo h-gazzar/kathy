@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     // Send URL-encoded (Google Sheets prefers this)
     const googleRes = await fetch(
-      'https://script.google.com/macros/s/AKfycbxrv9Qyb2OV-zYc0YcChZhcawRqsaQyblNEAq2GyZpoONDZGNQCbx3rVcbVdXxnBeXN3Q/exec',
+      'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhDBi0R5qpevDQ1jMsjYowdrs8khKD4nAHtd9WAx_kAlp0mDAg1VnSm5NbZOrr1T-fpwVdLijRtVDAInTSo7XvoY6kmPC2fAKF9mVpoX00J0SyMtSSYqI0KrjQTHJ_UR6s3DSBgXNgYLNYgFxTQjmD3W6O9xcCPS4-2nyllZWG2JChOHH7BLlARuDgENGMiiNcN-58CusXL5Gvf7CRI-z1DYYnivzo-S4WjNhlL4mMo35fJFXduoIKpRTMW2twEW06sga14_NKPwSzzEdOvvq4dhykVnneziic8j1aa&lib=MFq039kLL19Mjvyu23Z_FWI3py9AI10j9',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
