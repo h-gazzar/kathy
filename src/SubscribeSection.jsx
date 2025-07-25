@@ -8,6 +8,9 @@ function SubscribeSection() {
     const First_Name = e.target.First_Name.value;
     const Email = e.target.Email.value;
 
+    // Log what we’re about to send
+    console.log('Submitting to API:', { First_Name, Email });
+
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -15,14 +18,19 @@ function SubscribeSection() {
         body: JSON.stringify({ First_Name, Email }), 
       });
 
+      // Log raw response for debugging
+      console.log('API Response Status:', response.status);
+
       if (response.ok) {
+        console.log('Subscription success!');
         setMessage("Thank you for subscribing!");
         e.target.reset(); 
       } else {
+        console.error('Subscription failed:', await response.text());
         setMessage("Oops! Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.error(error);
+      console.error('Network error:', error);
       setMessage("Could not connect. Try again later.");
     }
   };
