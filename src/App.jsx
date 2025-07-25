@@ -58,7 +58,7 @@ function App() {
 
               <div className="apply-now-container">
                 <a 
-                  href="https://freelancescaler.org/vsl?fbclid=PAQ0xDSwLvScRleHRuA2FlbQIxMAABp6jBjLZTORbe9AgHrGdRfrkSfMMB-6oylobuqhZblmdnx-3kEduMkP5SvkM1_aem_5vv1l7AxEalLKYk3OdQA9g" 
+                  href="https://mpbkvumhf2a.typeform.com/to/G8ROnnlL?fbclid=PAQ0xDSwLvSaZleHRuA2FlbQIxMQABp1UC4wFLA2EI85mJHU_YnrsfgyVWZqbRuYcI9ZgEN8DtjN0FTRi5XEtrepZr_aem_CFOW7eOtNmtvsi5koMrCOQ&typeform-source=l.instagram.com" 
                   className="apply-now-btn"
                 >
                   Apply Now
@@ -156,7 +156,7 @@ function App() {
 
         <div className="apply-now-container">
                 <a 
-                  href="https://freelancescaler.org/vsl?fbclid=PAQ0xDSwLvScRleHRuA2FlbQIxMAABp6jBjLZTORbe9AgHrGdRfrkSfMMB-6oylobuqhZblmdnx-3kEduMkP5SvkM1_aem_5vv1l7AxEalLKYk3OdQA9g" 
+                  href="https://mpbkvumhf2a.typeform.com/to/G8ROnnlL?fbclid=PAQ0xDSwLvSaZleHRuA2FlbQIxMQABp1UC4wFLA2EI85mJHU_YnrsfgyVWZqbRuYcI9ZgEN8DtjN0FTRi5XEtrepZr_aem_CFOW7eOtNmtvsi5koMrCOQ&typeform-source=l.instagram.com" 
                   className="apply-now-btn"
                 >
                   Apply Now
