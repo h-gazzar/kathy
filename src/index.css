@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* Base styles (unchanged) */
 :root {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
@@ -64,12 +63,11 @@ header img {
   align-items: center;
 }
 
-/* Remove extra margin and max-width here */
 video {
   display: block;
-  width: 100%; /* The wrapper will handle scaling */
+  width: 100%;
   border-radius: 10px;
-  margin: 0;   /* Removes bottom spacing */
+  margin: 0;   
 }
 
 
@@ -80,21 +78,20 @@ video {
 html, body {
   margin: 0;
   padding: 0;
-  height: auto;          /* Let page grow naturally */
-  min-height: 100vh;     /* Still fills the screen initially */
+  height: auto;       
+  min-height: 100vh;    
 }
 
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;    /* Horizontal center */
-  justify-content: flex-start; /* Don't force vertical centering */
+  align-items: center;  
+  justify-content: flex-start; 
   background-color: #f1ead8;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
-/* Make .main stack naturally with scroll */
 .main {
   display: flex;
   flex-direction: column;
@@ -104,7 +101,6 @@ body {
   min-height: 100vh;
 }
 
-/* Keep card centered horizontally but free vertically */
 .inner-constructor {
   width: 30vw;
   background-color: #d5c7ad;
@@ -114,12 +110,11 @@ body {
   min-width: 280px;
   padding-bottom: 30px;
 
-  position: relative;   /* For logo */
-  margin: 40px auto;    /* Horizontal center with margin at top */
+  position: relative; 
+  margin: 40px auto;    
 }
 
 
-/* Top header background */
 .top-bg {
   background-color: #8a8e75;
   height: 120px;
@@ -128,7 +123,6 @@ body {
   position: relative;
 }
 
-/* Logo wrapper */
 .logo-wrapper {
   position: absolute;
   bottom: -50px;
@@ -205,9 +199,7 @@ body {
   color: #68604d;
 }
 
-/* -------------------------------- */
-/* Responsive Tweaks (Tablets) */
-/* -------------------------------- */
+
 @media (max-width: 768px) {
   .inner-constructor {
     width: 80vw;
@@ -238,9 +230,6 @@ body {
   }
 }
 
-/* -------------------------------- */
-/* Responsive Tweaks (Small Phones) */
-/* -------------------------------- */
 @media (max-width: 480px) {
   .inner-constructor {
     width: 90vw;
@@ -273,7 +262,6 @@ body {
   }
 }
 
-/* Video wrapper stays the same */
 .videoWrapper {
   position: relative;
   margin-top:50px;
@@ -284,11 +272,10 @@ body {
   overflow: hidden;
   padding-left: 2vw;
   padding-right: 2vw;
-  box-sizing: border-box; /* Ensures padding doesn’t expand the container */
+  box-sizing: border-box; 
 
 }
 
-/* Ensure video fills wrapper */
 .videoWrapper video {
   display: block;
   width: 100%;
@@ -297,14 +284,13 @@ body {
   
 }
 
-/* Progress bar at the bottom of the video (slightly smaller) */
 .progressBar {
   position: absolute;
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(95% - 4vw); /* Make bar 5% narrower than full width */
-  height: 4px;            /* Slightly thinner */
+  width: calc(95% - 4vw); 
+  height: 4px;          
   appearance: none;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -325,7 +311,6 @@ body {
   
 }
 
-/* Buttons (bottom left) */
 .videoButtons {
   position: absolute;
   bottom: 40px;      
@@ -335,16 +320,15 @@ body {
   z-index: 6;
   padding-left: 2vw;
   padding-right: 2vw;
-  box-sizing: border-box; /* Ensures padding doesn’t expand the container */
+  box-sizing: border-box;
 }
 
-/* Button styles with fixed size */
 .iconButton {
   background: #ffffff;
   border: none;
   border-radius: 50%;
-  width: 44px;            /* Fixed button size */
-  height: 44px;           /* Same width & height */
+  width: 44px;          
+  height: 44px;         
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -357,11 +341,10 @@ body {
   background: #f0f0f0;
 }
 
-/* Force icons to be identical sizes and centered */
 .iconButton img {
   width: 20px;
   height: 20px;
-  object-fit: contain;  /* Ensures no distortion */
+  object-fit: contain;  
   display: block;
   pointer-events: none;
 }
@@ -369,31 +352,28 @@ body {
 .seperator {
   width: 90%;
   height: 1px;
-  margin: 2vw auto;          /* Centers it horizontally with spacing */
-  background-color: #aaa;     /* Softer grey color */
-  border: none;               /* Removes any default border */
+  margin: 2vw auto;         
+  background-color: #aaa;     
+  border: none;               
   display: block;
 }
 
 
-/* Reviews container with rounded edges */
 .reviews {
   background-color: #f1ead8;
-  border-radius: 12px;              /* Rounded corners */
-  padding: 20px 2vw;                /* Added 2vw left/right padding */
+  border-radius: 12px;             
+  padding: 20px 2vw;              
   margin: 20px auto;
   max-width: 90%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  box-sizing: border-box;           /* Ensure padding doesn’t overflow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box;         
 }
 
-/* Accordion wrapper */
 .review-item {
   border-bottom: 1px solid #d0d0d0;
   padding: 10px 0;
 }
 
-/* Accordion header (clickable) */
 .review-header {
   display: flex;
   justify-content: space-between;
@@ -407,10 +387,9 @@ body {
 }
 
 .review-header:hover {
-  background-color: #e6deca; /* Subtle hover */
+  background-color: #e6deca;
 }
 
-/* Accordion content (hidden by default) */
 .review-content {
   max-height: 0;
   overflow: hidden;
@@ -421,9 +400,8 @@ body {
   line-height: 1.4;
 }
 
-/* Expanded state */
 .review-item.active .review-content {
-  max-height: 1000px; /* Large enough to fit long reviews */
+  max-height: 1000px; 
   opacity: 1;
   padding-top: 10px;
 }
@@ -439,14 +417,11 @@ body {
   box-sizing: border-box;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-
-  /* Animation for entry */
   opacity: 0;
   transform: translateY(15px);
   animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Keyframes for fade/slide animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -455,7 +430,6 @@ body {
 }
 
 
-/* Heading + description */
 .subscribe-heading {
   color: #333;
   font-size: 1.8rem;
@@ -469,43 +443,41 @@ body {
   line-height: 1.4;
 }
 
-/* Form layout */
 .subscribe-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: center;
 }
-
-/* Ensure text inside inputs is visible */
 .subscribe-form input[type="email"],
-.subscribe-form input[type="tel"] {
+.subscribe-form input[type="text"] {
   width: 100%;
   max-width: 400px;
   padding: 12px 15px;
   border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-  color: #68604d; /* <--- Make entered text grey */
+  background-color: #fff; /* Always white background */
+  color: #68604d; /* Dark text */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-/* Style the placeholder text */
+/* Placeholder matches input text (no grey look) */
 .subscribe-form input::placeholder {
-  color: #777;  /* Light grey for placeholders */
-  opacity: 1;   /* Ensure it’s fully visible */
+  color: #68604d;
+  opacity: 1; /* Ensure it's fully visible */
 }
 
-/* Highlight on focus */
+/* On focus, keep everything consistent */
 .subscribe-form input:focus {
   outline: none;
   border-color: #8a8e75;
   box-shadow: 0 0 6px rgba(138, 142, 117, 0.4);
+  color: #68604d; /* Text stays dark */
+  background-color: #fff; /* No dimming */
 }
 
 
-/* Submit button */
 .subscribe-button {
   background-color: #8a8e75;
   color: #fff;
@@ -528,7 +500,6 @@ body {
   background-color: #6d715f;
 }
 
-/* Success/Error message (if using state) */
 .subscribe-message {
   margin-top: 10px;
   font-size: 0.9rem;
@@ -536,21 +507,82 @@ body {
 }
 
 
-/* Universal float-up animation */
 .float-up {
   opacity: 0;
   transform: translateY(20px);
   animation: floatUp 0.8s ease forwards;
 }
 
-/* Slight delay per element if you want a staggered effect */
 .float-up.delay-1 { animation-delay: 0.1s; }
 .float-up.delay-2 { animation-delay: 0.2s; }
 .float-up.delay-3 { animation-delay: 0.3s; }
+
+
+/* Force background to stay white after typing or autofill */
+.subscribe-form input[type="email"],
+.subscribe-form input[type="text"] {
+  background-color: #fff !important;
+  -webkit-text-fill-color: #68604d !important; /* Force text color */
+  transition: background-color 0s ease; /* Prevent flicker */
+}
+
+/* Specifically target Chrome/Safari autofill */
+.subscribe-form input:-webkit-autofill,
+.subscribe-form input:-webkit-autofill:focus,
+.subscribe-form input:-webkit-autofill:hover,
+.subscribe-form input:-webkit-autofill:active {
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #68604d !important;
+}
+
+/* Keep focus state consistent */
+.subscribe-form input:focus {
+  background-color: #fff !important;
+  color: #68604d !important;
+  border-color: #8a8e75;
+  box-shadow: 0 0 6px rgba(138, 142, 117, 0.4);
+}
 
 @keyframes floatUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.apply-now-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.apply-now-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #8A8E75; 
+  color: #F1EAD8; 
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeScaleIn 0.8s ease forwards;
+  animation-delay: 1.5s; 
+}
+
+.apply-now-btn:hover {
+  background-color: #68604D;
+  color: #F1EAD8;
+  transform: scale(1.05);
+}
+
+@keyframes fadeScaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

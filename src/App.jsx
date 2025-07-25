@@ -52,16 +52,26 @@ function App() {
             </div>
           </div>
 
-          {/* Video Player floats in */}
-          <div className="float-up delay-2">
-            <VideoPlayer />
-          </div>
 
-          {/* Separator and heading float in */}
-          <div className='seperator float-up delay-3'></div>
-          <h4 className="float-up delay-3">
-            If the video wasn’t enough, take it from my patients:
-          </h4>
+            <div className="float-up delay-2">
+              <VideoPlayer />
+
+              <div className="apply-now-container">
+                <a 
+                  href="https://mpbkvumhf2a.typeform.com/to/G8ROnnlL?fbclid=PAQ0xDSwLvSaZleHRuA2FlbQIxMQABp1UC4wFLA2EI85mJHU_YnrsfgyVWZqbRuYcI9ZgEN8DtjN0FTRi5XEtrepZr_aem_CFOW7eOtNmtvsi5koMrCOQ&typeform-source=l.instagram.com" 
+                  className="apply-now-btn"
+                >
+                  Apply Now
+                </a>
+              </div>
+            </div>
+
+            {/* Separator and heading float in */}
+            <div className='seperator float-up delay-3'></div>
+            <h4 className="float-up delay-3">
+              If the video wasn’t enough, take it from my patients:
+            </h4>
+
 
           {/* Reviews block floats in */}
           <div className="reviews float-up delay-4">
