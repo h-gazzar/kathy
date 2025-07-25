@@ -4,23 +4,24 @@ export default async function handler(req, res) {
   }
 
   try {
-    const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-    console.log("Parsed body:", body);
+    const body =
+      typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
     const { First_Name, Email } = body || {};
+
     if (!First_Name || !Email) {
       return res.status(400).json({ error: 'Missing First_Name or Email' });
     }
 
     console.log('Forwarding to Google Script:', { First_Name, Email });
 
-    // Send as URL-encoded (more compatible with Google Apps Script)
+    // Send URL-encoded (Google Sheets prefers this)
     const googleRes = await fetch(
       'https://script.google.com/macros/s/AKfycbxnQ5YXLN4274HJyMHMVvDtMuJazExsNkhI-qrgys9d1BFyc4fw108jTzdEaZYYSWJ2sA/exec',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ first_name: First_Name, email: Email }).toString(),
+        body: new URLSearchParams({ First_Name, Email }).toString(),
       }
     );
 
