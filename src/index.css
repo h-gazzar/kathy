@@ -479,6 +479,7 @@ body {
 
 
 .subscribe-button {
+  display: block;  /* Ensure the button is treated as a block-level element */
   background-color: #8a8e75;
   color: #fff;
   border: none;
@@ -488,6 +489,8 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .subscribe-button:hover {
