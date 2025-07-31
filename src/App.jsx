@@ -72,87 +72,30 @@ function App() {
               If the video wasn’t enough, take it from my patients:
             </h4>
 
+                        <div className="vertical-image-section float-up delay-3">
+              {/* Top 3 stacked images */}
+              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" alt="/public/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" className="vertical-image" />
+              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (1).jpeg" alt="Image 2" className="vertical-image" />
+              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (2).jpeg" alt="Image 3" className="vertical-image" />
 
-         {/* Reviews block floats in */}
-        <div className="reviews float-up delay-4">
-          {/* Review 1 */}
-          <div className="review-item">
-            <div className="review-header">
-              <img src="path_to_image/jane_doe_image.jpg" alt="Jane Doe" className="reviewer-image" />
-              <span>Jane Doe</span>
-            </div>
-            <div className="review-content">
-              <p>
-                "I had the absolute pleasure of working with Dr. Kathy to help jumpstart my healing journey..."
-              </p>
-            </div>
-          </div>
+              {/* Centered Text Block */}
+              <div className="image-text-block">
+                <h4 className="vertical-section-heading">Root Cause Reset is a 12-Week program & 1-on-1 That Helps Women:</h4>
+                <ul className="vertical-section-list">
+                  <li>Balance</li>
+                  <li>Restore</li>
+                  <li>Debloat</li>
+                  <li>Nourish</li>
+                  <li>Reset</li>
+                  <li>Thrive</li>
+                </ul>
+              </div>
 
-          {/* Review 2 */}
-          <div className="review-item">
-            <div className="review-header">
-              <img src="path_to_image/mark_johnson_image.jpg" alt="Mark Johnson" className="reviewer-image" />
-              <span>Mark Johnson</span>
+              {/* Bottom 3 stacked images */}
+              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (3).jpeg" alt="Image 4" className="vertical-image" />
+              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (4).jpeg" alt="Image 5" className="vertical-image" />
+              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM.jpeg" alt="Image 6" className="vertical-image" />
             </div>
-            <div className="review-content">
-              <p>
-                "I'm so grateful I found Dr. Kathy! I had worked with several practitioners in the past..."
-              </p>
-            </div>
-          </div>
-
-          {/* Review 3 */}
-          <div className="review-item">
-            <div className="review-header">
-              <img src="path_to_image/emily_carter_image.jpg" alt="Emily Carter" className="reviewer-image" />
-              <span>Emily Carter</span>
-            </div>
-            <div className="review-content">
-              <p>
-                "Where do I even begin? After years of bouncing from doctor to doctor..."
-              </p>
-            </div>
-          </div>
-
-          {/* Review 4 */}
-          <div className="review-item">
-            <div className="review-header">
-              <img src="path_to_image/sophia_martinez_image.jpg" alt="Sophia Martinez" className="reviewer-image" />
-              <span>Sophia Martinez</span>
-            </div>
-            <div className="review-content">
-              <p>
-                "It's been an honor to work with Dr. Kathy over the past few months..."
-              </p>
-            </div>
-          </div>
-
-          {/* Review 5 */}
-          <div className="review-item">
-            <div className="review-header">
-              <img src="path_to_image/bob_gomez_image.jpg" alt="Bob Gomez" className="reviewer-image" />
-              <span>Bob Gomez</span>
-            </div>
-            <div className="review-content">
-              <p>
-                "My time with Dr. Kathy has been nothing but extraordinary..."
-              </p>
-            </div>
-          </div>
-
-          {/* Review 6 */}
-          <div className="review-item">
-            <div className="review-header">
-              <img src="path_to_image/david_lee_image.jpg" alt="David Lee" className="reviewer-image" />
-              <span>David Lee</span>
-            </div>
-            <div className="review-content">
-              <p>
-                "Unlike a lot of traditional doctors, Dr. Kathy actually takes the time to listen..."
-              </p>
-            </div>
-          </div>
-        </div>
 
         <div className="apply-now-container">
                 <a 
