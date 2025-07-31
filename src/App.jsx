@@ -74,9 +74,9 @@ function App() {
 
                         <div className="vertical-image-section float-up delay-3">
               {/* Top 3 stacked images */}
-              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" alt="/public/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" className="vertical-image" />
-              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (1).jpeg" alt="Image 2" className="vertical-image" />
-              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (2).jpeg" alt="Image 3" className="vertical-image" />
+              <img src="/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" alt="/public/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" className="vertical-image" />
+              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (1).jpeg" alt="Image 2" className="vertical-image" />
+              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (2).jpeg" alt="Image 3" className="vertical-image" />
 
               {/* Centered Text Block */}
               <div className="image-text-block">
@@ -92,9 +92,9 @@ function App() {
               </div>
 
               {/* Bottom 3 stacked images */}
-              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (3).jpeg" alt="Image 4" className="vertical-image" />
-              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM (4).jpeg" alt="Image 5" className="vertical-image" />
-              <img src="/public/WhatsApp Image 2025-07-13 at 2.20.03 PM.jpeg" alt="Image 6" className="vertical-image" />
+              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (3).jpeg" alt="Image 4" className="vertical-image" />
+              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (4).jpeg" alt="Image 5" className="vertical-image" />
+              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM.jpeg" alt="Image 6" className="vertical-image" />
             </div>
 
         <div className="apply-now-container">
