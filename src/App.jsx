@@ -53,9 +53,16 @@ function App() {
           </div>
 
 
-            <div className="float-up delay-2">
-              <VideoPlayer />
+          <div className="float-up delay-2 headline-section">
+            <h2 className="main-headline">
+              Balance Your Hormones. Regulate Your Cycle. <br />
+              Feel Like a Woman in Control Again
+            </h2>
+            <h3 className="sub-headline">
+              Watch the video below to learn how to reset your hormones and feel better—for good
+            </h3>
 
+            <VideoPlayer />
               <div className="apply-now-container">
                 <a 
                   href="https://mpbkvumhf2a.typeform.com/to/G8ROnnlL?fbclid=PAQ0xDSwLvSaZleHRuA2FlbQIxMQABp1UC4wFLA2EI85mJHU_YnrsfgyVWZqbRuYcI9ZgEN8DtjN0FTRi5XEtrepZr_aem_CFOW7eOtNmtvsi5koMrCOQ&typeform-source=l.instagram.com" 
@@ -72,32 +79,32 @@ function App() {
               If the video wasn’t enough, take it from my patients:
             </h4>
 
-                        <div className="vertical-image-section float-up delay-3">
-              {/* Top 3 stacked images */}
-              <img src="/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" alt="/public/WhatsApp Image 2025-07-13 at 2.20.02 PM.jpeg" className="vertical-image" />
-              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (1).jpeg" alt="Image 2" className="vertical-image" />
-              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (2).jpeg" alt="Image 3" className="vertical-image" />
+            <div className="vertical-image-section float-up delay-3">
+            {/* Top 3 stacked images */}
+            <img src="/WhatsApp Image 2025-07-13 at 2.20.02 PM 1.svg" alt="Image 1" className="vertical-image image-1" />
+            <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (1) 1.svg" alt="Image 2" className="vertical-image image-2" />
+            <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (2) 1.svg" alt="Image 3" className="vertical-image image-3" />
 
-              {/* Centered Text Block */}
-              <div className="image-text-block">
-                <h4 className="vertical-section-heading">Root Cause Reset is a 12-Week program & 1-on-1 That Helps Women:</h4>
-                <ul className="vertical-section-list">
-                  <li>Balance</li>
-                  <li>Restore</li>
-                  <li>Debloat</li>
-                  <li>Nourish</li>
-                  <li>Reset</li>
-                  <li>Thrive</li>
-                </ul>
-              </div>
-
-              {/* Bottom 3 stacked images */}
-              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (3).jpeg" alt="Image 4" className="vertical-image" />
-              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (4).jpeg" alt="Image 5" className="vertical-image" />
-              <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM.jpeg" alt="Image 6" className="vertical-image" />
+            {/* Text block remains unchanged */}
+            <div className="image-text-block">
+              <h4 className="vertical-section-heading">Root Cause Reset is a 12-Week program & 1-on-1 That Helps Women:</h4>
+              <ul className="vertical-section-list">
+                <li>Balance</li>
+                <li>Restore</li>
+                <li>Debloat</li>
+                <li>Nourish</li>
+                <li>Reset</li>
+                <li>Thrive</li>
+              </ul>
             </div>
 
-        <div className="apply-now-container">
+            {/* Bottom 3 stacked images */}
+            <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (3) 1.svg" alt="Image 4" className="vertical-image image-4" />
+            <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM (4) 1.svg" alt="Image 5" className="vertical-image image-5" />
+            <img src="/WhatsApp Image 2025-07-13 at 2.20.03 PM 1.svg" alt="Image 6" className="vertical-image image-6" />
+          </div>
+
+    <div className="apply-now-container">
                 <a 
                   href="https://mpbkvumhf2a.typeform.com/to/G8ROnnlL?fbclid=PAQ0xDSwLvSaZleHRuA2FlbQIxMQABp1UC4wFLA2EI85mJHU_YnrsfgyVWZqbRuYcI9ZgEN8DtjN0FTRi5XEtrepZr_aem_CFOW7eOtNmtvsi5koMrCOQ&typeform-source=l.instagram.com" 
                   className="apply-now-btn"
