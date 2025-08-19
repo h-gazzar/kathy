@@ -17,35 +17,15 @@ function App() {
 
           {/* Brand section floats next */}
           <div className="brand-section float-up delay-1">
-            <h3 className="brand-name">RootCauseReset_placeholder</h3>
+            <h3 className="brand-name">RootCauseReset</h3>
 
             <div className="social-group">
               <div className="social-item">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/doctorkathy_?igsh=MWUzbDd3eHNxZmEzeg==" target="_blank" rel="noopener noreferrer">
                   <img src="/icons8-instagram-24.svg" alt="Instagram" />
                 </a>
                 <p className="icon-credit">
                   <a target="_blank" href="https://icons8.com/icon/118497/instagram">Instagram</a> icon by 
-                  <a target="_blank" href="https://icons8.com"> Icons8</a>
-                </p>
-              </div>
-
-              <div className="social-item">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons8-facebook-50.svg" alt="Facebook" />
-                </a>
-                <p className="icon-credit">
-                  <a target="_blank" href="https://icons8.com/icon/118502/facebook">Facebook</a> icon by 
-                  <a target="_blank" href="https://icons8.com"> Icons8</a>
-                </p>
-              </div>
-
-              <div className="social-item">
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons8-x-24.svg" alt="X" />
-                </a>
-                <p className="icon-credit">
-                  <a target="_blank" href="https://icons8.com/icon/CmhVg6wmHTH8/x">X</a> icon by 
                   <a target="_blank" href="https://icons8.com"> Icons8</a>
                 </p>
               </div>
